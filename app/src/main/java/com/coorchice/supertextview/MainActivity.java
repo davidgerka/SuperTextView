@@ -34,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 //              stv_0.setEnabled(false);
-                stv_0.setBgColorAttr(R.attr.attr_part_translucent_black1);
-                stv_0.setStrokeColorAttr(R.attr.attr_part_translucent_black);
+//                stv_0.setBgColor(R.color.button_color_sel);
+//                stv_0.setStrokeColorAttr(R.attr.attr_part_translucent_black);
             }
         }, 4000);
 
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "ssssssss", Toast.LENGTH_SHORT).show();
             }
         });
+//        stv_0.setEnabled(false);
 
 
         stv_17.setAdjuster(new MoveEffectAdjuster())
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 .startAnim();
 
         stv_18.setAdjuster(new RippleAdjuster(getResources().getColor(R.color.opacity_5_a58fed)));
+        stv_18.setEnabled(false);
 
         OpportunityDemoAdjuster opportunityDemoAdjuster1 = new OpportunityDemoAdjuster();
         opportunityDemoAdjuster1.setOpportunity(SuperTextView.Adjuster.Opportunity.BEFORE_DRAWABLE);

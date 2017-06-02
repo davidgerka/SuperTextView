@@ -776,6 +776,7 @@ public class SuperTextView extends TextView {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        if(!isClickable() || !isEnabled())return super.onTouchEvent(event);
         if (adjuster != null) {
             if (adjuster.onTouch(this, event) && isAutoAdjust()) {
                 super.onTouchEvent(event);
